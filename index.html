@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форми та перевірки hw-4 JS</title>
+  </head>
+  <body>
+
+    <!-- // Завдання 1 -->
+
+    <div>
+      <h2>Перевірка заповнення полів</h2>
+      <input type="text" id="field1" placeholder="Поле 1" />
+      <input type="text" id="field2" placeholder="Поле 2" />
+      <button onclick="checkFields()">Перевірити</button>
+      <p id="fieldCheckResult"></p>
+    </div>
+
+    <!-- // Завдання 2 -->
+
+    <div>
+      <h2>Перевірка суми чисел</h2>
+      <input type="number" id="number1" placeholder="Число 1" />
+      <input type="number" id="number2" placeholder="Число 2" />
+      <button onclick="checkSum()">Перевірити</button>
+      <p id="sumCheckResult"></p>
+    </div>
+
+    <!-- // Завдання 3 -->
+
+    <div>
+      <h2>Перевірка тексту на слово "JavaScript"</h2>
+      <input type="text" id="textInput" placeholder="Введіть текст" />
+      <button onclick="checkForJavaScript()">Перевірити</button>
+      <p id="textCheckResult"></p>
+    </div>
+
+    <!-- // Завдання 4 -->
+     
+    <div>
+      <h2>Перевірка діапазону числа</h2>
+      <input type="number" id="numberInput" placeholder="Введіть число" />
+      <button onclick="checkRange()">Перевірити</button>
+      <p id="rangeCheckResult"></p>
+    </div>
+
+    <!-- // Завдання 5 -->
+
+    <div>
+      <h2>Перевірка введених даних</h2>
+      <form onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Ім'я" />
+        <input type="email" id="email" placeholder="Email" />
+        <input type="password" id="password" placeholder="Пароль" />
+        <button type="submit">Надіслати</button>
+      </form>
+      <p id="formCheckResult"></p>
+    </div>
+    <script src="./hw4.js"></script>
+  </body>
+</html>

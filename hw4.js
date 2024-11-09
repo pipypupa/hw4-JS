@@ -1,61 +1,47 @@
+const field1 = prompt("Заповніть поле");
+const field2 = prompt("Заповніть поле");
 
-        // Завдання 1
+if (field1 && field2) {
+  alert("Обидва поля заповнені");
+} else {
+  alert("Не всі поля заповнені");
+}
 
-        function checkFields() {
-            const field1 = document.getElementById("field1").value;
-            const field2 = document.getElementById("field2").value;
-            const result = (field1 && field2) ? "Обидва поля заповнені" : "Не всі поля заповнені";
-            document.getElementById("fieldCheckResult").textContent = result;
-        }
+const number1 = parseFloat(prompt("Введіть перше число"));
+const number2 = parseFloat(prompt("Введіть друге число"));
 
-        // Завдання 2
+if (!isNaN(number1) && !isNaN(number2) && number1 + number2 > 10) {
+  alert("Сума більша за 10");
+} else {
+  alert("Сума менша або дорівнює 10");
+}
 
-        function checkSum() {
-            const num1 = parseFloat(document.getElementById("number1").value);
-            const num2 = parseFloat(document.getElementById("number2").value);
-            const result = (num1 + num2 > 10) ? "Сума більша за 10" : "Сума менша або дорівнює 10";
-            document.getElementById("sumCheckResult").textContent = result;
-        }
+const textJs = prompt("Введіть слово JavaScript");
 
-        // Завдання 3
+if (textJs.toLowerCase() === "JavaScript".toLowerCase()) {
+  alert("Ви правильно заповнили поле");
+} else {
+  alert("Вам потрбно було ввести JavaScript");
+}
 
-        function checkForJavaScript() {
-            const text = document.getElementById("textInput").value;
-            const result = text.includes("JavaScript") ? "Текст містить слово JavaScript" : "Текст не містить слово JavaScript";
-            document.getElementById("textCheckResult").textContent = result;
-        }
+const numInput = parseFloat(prompt("Введіть число"));
 
-        // Завдання 4
+if (numInput >= 10 && numInput <= 20) {
+  alert("Число входить в діапазон від 10 до 20");
+} else {
+  alert("Число не входить в діапазон від 10 до 20");
+}
 
-        function checkRange() {
-            const number = parseFloat(document.getElementById("numberInput").value);
-            const result = (number > 10 && number < 20) ? "Число входить в діапазон від 10 до 20" : "Число не входить в діапазон від 10 до 20";
-            document.getElementById("rangeCheckResult").textContent = result;
-        }
+const userName = prompt("Введіть ім'я");
+const userEmail = prompt("Введіть email");
+const userPassword = prompt("Введіть пароль");
 
-        // Завдання 5
-
-        function validateForm() {
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
-
-            if (name.length < 3) {
-                document.getElementById("formCheckResult").textContent = "Ім'я повинно містити не менше 3 символів.";
-                return false;
-            }
-
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(email)) {
-                document.getElementById("formCheckResult").textContent = "Email повинен містити символ '@' та крапку після нього.";
-                return false;
-            }
-
-            if (password.length < 6) {
-                document.getElementById("formCheckResult").textContent = "Пароль повинен містити не менше 6 символів.";
-                return false;
-            }
-
-            window.location.href = "success.html";
-            return true;
-        }
+if (
+  userName.length >= 3 &&
+  userEmail.includes("@.") &&
+  userPassword.length >= 6
+) {
+  alert("Дані правильно заповнені");
+} else {
+  alert("Дані містять помилку");
+}
